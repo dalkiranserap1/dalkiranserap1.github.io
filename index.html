@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ADS-352 Örnek Sitesi</title>
+  <meta name="description" content="Kısa bio burada. Kişisel portfolyo sayfası." />
+  <!-- Gömülü CSS: Tüm stiller bu dosyada yer alır -->
+  <style>
+    :root{
+      --bg:#0f1724; /* koyu arkaplan */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent1:#7c5cff;
+      --accent2:#00d4ff;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      font-synthesis: none;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1000px 600px at 10% 10%, rgba(124,92,255,0.08), transparent),
+                  radial-gradient(900px 500px at 90% 90%, rgba(0,212,255,0.04), transparent),
+                  var(--bg);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 24px;
+      line-height:1.5;
+    }
+
+    .container{
+      max-width:1000px;
+      margin:0 auto;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:28px;\    }
+    .brand{
+      display:flex;gap:14px;align-items:center
+    }
+    .avatar{
+      width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      display:grid;place-items:center;font-weight:700;color:#081427;font-size:22px;box-shadow:0 6px 18px rgba(2,6,23,0.6);
+    }
+    h1{font-size:20px;margin:0}
+    .toplinks{display:flex;gap:10px;align-items:center}
+    .btn{
+      background:linear-gradient(90deg,var(--accent1),var(--accent2));
+      padding:8px 12px;border-radius:10px;color:#041226;font-weight:600;border:none;cursor:pointer;
+      box-shadow:0 6px 18px rgba(124,92,255,0.12);
+    }
+    .grid{
+      display:grid;grid-template-columns:1fr 360px;gap:22px;align-items:start;
+    }
+
+    /* Card */
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.04);
+      border-radius:var(--radius);padding:20px;
+      box-shadow:0 6px 30px rgba(2,6,23,0.6);
+    }
+
+    /* Hero */
+    .hero h2{font-size:28px;margin:0 0 6px}
+    .hero p{color:var(--muted);margin:0 0 16px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    /* About */
+    .about{margin-top:14px;color:var(--muted)}
+
+    /* Projects */
+    .projects{display:grid;gap:12px}
+    .project{display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.015),transparent);border:1px solid rgba(255,255,255,0.03)}
+    .p-thumb{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent2),var(--accent1));display:grid;place-items:center;font-weight:700;color:#032033}
+    .p-info h4{margin:0;font-size:15px}
+    .p-info p{margin:4px 0 0;color:var(--muted);font-size:13px}
+
+    /* Contact */
+    .contact form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:10px;border-radius:10px;color:inherit;font-size:14px}
+    textarea{min-height:120px;resize:vertical}
+Bu site ADS 352 açık kaynak yazılım geliştirme dersi için oluşturulmuştur.
+    footer{margin-top:26px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media (max-width:920px){
+      .grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:14px}
+      .avatar{width:56px;height:56px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">AD</div>
+        <div>
+          <h1>ADS 352</h1>
+          <div style="color:var(--muted);font-size:13px">Açık Kaynak Yazılım Geliştirme Dersi/div>
+        </div>
+      </div>
+      <div class="toplinks">
+        <a class="btn" href="#contact">İletişime Geç</a>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section>
+        <div class="card hero">
+          <h2>Merhaba — ben <strong>Adınız</strong>.</h2>
+          <p>Web, ürün tasarımı ve performans odaklı front-end geliştirme ile uğraşıyorum. Aşağıda son projelerim ve iletişim bilgilerim var.</p>
+
+          <div class="tags" aria-hidden="true">
+            <span class="tag">#JavaScript</span>
+            <span class="tag">#HTML</span>
+            <span class="tag">#CSS</span>
+            <span class="tag">#React</span>
+          </div>
+
+          <div class="about">
+            <h3 style="margin-top:18px">Hakkımda</h3>
+            <p>Buraya kısa bir biyografi yazabilirsiniz. Örneğin: 5+ yıllık deneyim, kullanıcı odaklı arayüzler ve hızlı prototipleme. Yeni fikirler denemeyi ve temiz, sürdürülebilir kod yazmayı seviyorum.</p>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:10px">
+            <a class="btn" href="#projects">Projelerim</a>
+            <a style="background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);text-decoration:none" href="#about">Daha fazla</a>
+          </div>
+        </div>
+
+        <div id="projects" class="card" style="margin-top:18px">
+          <h3>Projeler</h3>
+          <div class="projects" style="margin-top:12px">
+            <article class="project">
+              <div class="p-thumb">A</div>
+              <div class="p-info">
+                <h4>Proje Başlığı 1</h4>
+                <p>Kısa açıklama: hızlı web uygulaması, performans optimizasyonu.</p>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="p-thumb">B</div>
+              <div class="p-info">
+                <h4>Proje Başlığı 2</h4>
+                <p>Kısa açıklama: tasarım sistemi ve component kütüphanesi.</p>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="p-thumb">C</div>
+              <div class="p-info">
+                <h4>Proje Başlığı 3</h4>
+                <p>Kısa açıklama: kişisel blog veya portfolyo sitesi.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div id="about" class="card" style="margin-top:18px">
+          <h3>Daha fazlası</h3>
+          <p style="color:var(--muted)">Buraya yetenekleriniz, eğitim bilgileriniz, çalıştığınız şirketler, ödüller veya referanslar ekleyebilirsiniz. HTML içerik olarak zenginleştirmek isterseniz, <code>&lt;section&gt;</code> etiketleriyle kolayca genişletebilirsiniz.</p>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>İletişim</h3>
+          <p style="color:var(--muted)">E-posta, sosyal medya veya kısa bir form aracılığıyla bana ulaşabilirsiniz.</p>
+
+          <div id="contact" style="margin-top:12px" class="contact">
+            <form action="mailto:you@example.com" method="post" enctype="text/plain">
+              <input type="text" name="isim" placeholder="Adınız" />
+              <input type="email" name="email" placeholder="E-posta adresiniz" />
+              <textarea name="mesaj" placeholder="Mesajınız..."></textarea>
+              <button type="submit" class="btn">Gönder</button>
+            </form>
+
+            <div style="margin-top:12px;color:var(--muted);font-size:13px">
+              <div><strong>Email:</strong> you@example.com</div>
+              <div style="margin-top:6px"><strong>Konum:</strong> İstanbul, Türkiye</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3>Sosyal</h3>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
+            <a href="#" style="color:var(--muted);text-decoration:none">GitHub / kullanıcı</a>
+            <a href="#" style="color:var(--muted);text-decoration:none">LinkedIn / kullanıcı</a>
+            <a href="#" style="color:var(--muted);text-decoration:none">Twitter / @kullanici</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Adınız Soyadınız — Tüm hakları saklıdır.</div>
+      <div style="color:var(--muted)">Designed with ♥</div>
+    </footer>
+  </div>
+
+  <script>
+    // Küçük dokunuş: yılı güncelle
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Avatar baş harfleri otomatik ayarlanabilir (isteğe bağlı)
+    (function(){
+      var el = document.querySelector('.avatar');
+      if(!el) return;
+      // değiştir: adınızı buraya yazın ya da dinamik olarak set edin
+      var isim = 'Adınız Soyadınız';
+      var parts = isim.trim().split(' ');
+      var initials = parts.length>1 ? (parts[0][0]+parts[parts.length-1][0]) : isim.substr(0,2);
+      el.textContent = initials.toUpperCase();
+    })();
+  </script>
+
+  <!--
+   
+  
+  
+  -->
+</body>
+</html>
