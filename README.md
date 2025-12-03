@@ -1,2 +1,2 @@
-# dalkiranserap1.github.io
-Dalkiranserap1 Homepage
+# ADS 352 Dersi
+Ders için örnek site oluşturma deposudur.
